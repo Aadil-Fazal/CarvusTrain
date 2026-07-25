@@ -1,0 +1,756 @@
+You are an expert Python software architect, AI researcher, machine learning engineer, compiler engineer, framework designer, API designer, and documentation writer.
+
+Your task is to build an entire Python library named CarvusTrain.
+
+CarvusTrain is NOT a wrapper around another library. It is a complete AI training framework designed from scratch with a clean architecture, professional API, high performance, extensive documentation, and production-ready code.
+
+Everything generated must be fully functional, properly documented, modular, scalable, object-oriented where appropriate, and follow Python best practices (PEP 8, type hints, docstrings, testing, packaging, logging, and error handling).
+
+==================================================
+PRIMARY OBJECTIVE
+==================================================
+
+Create CarvusTrain, a Python package that allows developers to train custom AI models using simple, readable Python code.
+
+The framework should hide unnecessary complexity while remaining powerful enough for advanced users.
+
+It should feel like TensorFlow, PyTorch, and Scikit-learn, but with an even cleaner API.
+
+==================================================
+PROJECT NAME
+==================================================
+
+CarvusTrain
+
+Package Name:
+carvustrain
+
+CLI:
+carvustrain
+
+==================================================
+PROJECT STRUCTURE
+==================================================
+
+Generate the entire project.
+
+carvustrain/
+
+    __init__.py
+
+    model.py
+
+    trainer.py
+
+    dataset.py
+
+    parser.py
+
+    tokenizer.py
+
+    inference.py
+
+    optimizer.py
+
+    scheduler.py
+
+    memory.py
+
+    callbacks.py
+
+    metrics.py
+
+    losses.py
+
+    layers.py
+
+    activation.py
+
+    preprocessing.py
+
+    postprocessing.py
+
+    evaluation.py
+
+    exporter.py
+
+    configuration.py
+
+    exceptions.py
+
+    logger.py
+
+    utils.py
+
+    constants.py
+
+    version.py
+
+docs/
+
+examples/
+
+tests/
+
+README.md
+
+LICENSE
+
+CHANGELOG.md
+
+pyproject.toml
+
+==================================================
+GOALS
+==================================================
+
+The framework must be able to
+
+• Train AI models
+
+• Load datasets
+
+• Read text files
+
+• Read JSON
+
+• Read CSV
+
+• Read XML
+
+• Read YAML
+
+• Read Markdown
+
+• Tokenize text
+
+• Build vocabularies
+
+• Learn relationships
+
+• Save models
+
+• Load models
+
+• Fine tune models
+
+• Continue training
+
+• Export trained models
+
+• Perform inference
+
+• Answer questions
+
+• Generate text
+
+• Evaluate models
+
+• Benchmark models
+
+• Log training
+
+• Save checkpoints
+
+• Resume interrupted training
+
+==================================================
+PUBLIC API
+==================================================
+
+The syntax must be simple.
+
+Example:
+
+import carvustrain
+
+model = carvustrain.Model(
+    name="Carvus"
+)
+
+model.train(
+    data="train.txt",
+    method="normal",
+    duration="forever"
+)
+
+model.save("carvus.ct")
+
+model.ask("Who are you?")
+
+print(model.answer)
+
+==================================================
+ALTERNATIVE API
+==================================================
+
+Also support
+
+model.predict()
+
+model.generate()
+
+model.chat()
+
+model.learn()
+
+model.finetune()
+
+model.evaluate()
+
+model.export()
+
+model.load()
+
+model.save()
+
+model.summary()
+
+model.statistics()
+
+model.memory()
+
+==================================================
+TRAINING API
+==================================================
+
+Support
+
+epochs
+
+batch_size
+
+learning_rate
+
+optimizer
+
+device
+
+cpu
+
+cuda
+
+gpu
+
+mixed_precision
+
+workers
+
+shuffle
+
+seed
+
+checkpoint
+
+resume
+
+validation_split
+
+early_stopping
+
+dropout
+
+weight_decay
+
+gradient_clipping
+
+==================================================
+DATASET SYSTEM
+==================================================
+
+Support
+
+TXT
+
+CSV
+
+JSON
+
+JSONL
+
+XML
+
+YAML
+
+Markdown
+
+Folders
+
+Directories
+
+Recursive loading
+
+Automatic encoding detection
+
+UTF-8
+
+UTF-16
+
+ASCII
+
+==================================================
+CUSTOM TRAIN FILE
+==================================================
+
+Support files like
+
+[CarvusTrain]
+
+[Model]
+Name=Carvus
+
+[Training]
+
+Method=normal
+
+Duration=forever
+
+Shuffle=random
+
+Output=output.txt
+
+[Knowledge]
+
+Carvus is an advanced artificial intelligence assistant...
+
+The parser must automatically understand this format.
+
+==================================================
+QUESTION ANSWERING
+==================================================
+
+Support
+
+question=input()
+
+answer=model.ask(question)
+
+print(answer)
+
+or
+
+while True:
+
+    question=input("Ask Anything: ")
+
+    answer=model.ask(question)
+
+    print(answer)
+
+==================================================
+MODEL SYSTEM
+==================================================
+
+Support
+
+Model()
+
+ChatModel()
+
+TextModel()
+
+LanguageModel()
+
+CustomModel()
+
+==================================================
+MODEL FEATURES
+==================================================
+
+Support
+
+Training
+
+Inference
+
+Memory
+
+Knowledge Base
+
+Embeddings
+
+Tokenizer
+
+Vocabulary
+
+Attention
+
+Transformer Blocks
+
+Feed Forward Networks
+
+Multi Head Attention
+
+Layer Normalization
+
+Residual Connections
+
+Positional Encoding
+
+Caching
+
+Context Windows
+
+==================================================
+TOKENIZER
+==================================================
+
+Implement
+
+Word Tokenizer
+
+Character Tokenizer
+
+Sentence Tokenizer
+
+Byte Pair Encoding
+
+WordPiece
+
+SentencePiece
+
+Custom Tokenizers
+
+Vocabulary Builder
+
+Special Tokens
+
+==================================================
+TRAINING METHODS
+==================================================
+
+Support
+
+Normal
+
+Incremental
+
+Continuous
+
+Forever
+
+Streaming
+
+Fine Tuning
+
+Transfer Learning
+
+Reinforcement
+
+Self Supervised
+
+Supervised
+
+Unsupervised
+
+==================================================
+FILE PARSER
+==================================================
+
+The parser should automatically recognize
+
+TXT
+
+JSON
+
+CSV
+
+Markdown
+
+XML
+
+YAML
+
+Knowledge files
+
+Configuration files
+
+Custom CarvusTrain files
+
+==================================================
+CONFIGURATION
+==================================================
+
+Allow
+
+config.toml
+
+config.yaml
+
+config.json
+
+==================================================
+CHECKPOINT SYSTEM
+==================================================
+
+Automatically save
+
+Weights
+
+Optimizer State
+
+Vocabulary
+
+Epoch
+
+Loss
+
+Accuracy
+
+Learning Rate
+
+==================================================
+EXPORT
+==================================================
+
+Support
+
+.ct
+
+.bin
+
+.onnx
+
+.json
+
+.gguf
+
+==================================================
+LOGGING
+==================================================
+
+Implement
+
+Training logs
+
+Validation logs
+
+Checkpoint logs
+
+Warnings
+
+Errors
+
+Performance statistics
+
+Memory usage
+
+GPU usage
+
+CPU usage
+
+==================================================
+CLI
+==================================================
+
+Support
+
+carvustrain init
+
+carvustrain train
+
+carvustrain predict
+
+carvustrain chat
+
+carvustrain export
+
+carvustrain evaluate
+
+carvustrain benchmark
+
+carvustrain convert
+
+carvustrain version
+
+carvustrain doctor
+
+carvustrain config
+
+carvustrain install
+
+carvustrain update
+
+==================================================
+ERROR HANDLING
+==================================================
+
+Create custom exceptions.
+
+DatasetNotFoundError
+
+TrainingError
+
+ModelError
+
+ParserError
+
+TokenizerError
+
+ExportError
+
+InferenceError
+
+ConfigurationError
+
+==================================================
+DOCUMENTATION
+==================================================
+
+Generate
+
+README
+
+API documentation
+
+Examples
+
+Tutorials
+
+Quick Start
+
+Installation Guide
+
+Developer Guide
+
+Contribution Guide
+
+Architecture Guide
+
+==================================================
+TESTING
+==================================================
+
+Generate
+
+Unit Tests
+
+Integration Tests
+
+Parser Tests
+
+Tokenizer Tests
+
+Training Tests
+
+Inference Tests
+
+CLI Tests
+
+==================================================
+CODE QUALITY
+==================================================
+
+Use
+
+Type hints
+
+Dataclasses where appropriate
+
+Enums
+
+Logging
+
+Proper exceptions
+
+Docstrings
+
+Modular architecture
+
+Reusable code
+
+SOLID principles
+
+Clean Architecture
+
+Dependency Injection where beneficial
+
+==================================================
+PERFORMANCE
+==================================================
+
+Optimize
+
+Memory
+
+CPU
+
+GPU
+
+Disk IO
+
+Tokenizer Speed
+
+Training Speed
+
+Inference Speed
+
+Startup Time
+
+==================================================
+SECURITY
+==================================================
+
+Validate all user input.
+
+Prevent arbitrary code execution.
+
+Handle malformed datasets safely.
+
+Never silently ignore critical errors.
+
+==================================================
+COMPATIBILITY
+==================================================
+
+Support
+
+Python 3.10+
+
+Windows
+
+Linux
+
+macOS
+
+==================================================
+OUTPUT REQUIREMENTS
+==================================================
+
+Generate complete production-ready source code.
+
+Do not generate placeholders.
+
+Do not omit files.
+
+Do not write "implementation left as an exercise."
+
+Every module must be complete.
+
+Every function must be implemented.
+
+Every class must be documented.
+
+Every public API must have examples.
+
+==================================================
+GRAMMAR REQUIREMENTS
+==================================================
+
+Use correct English grammar throughout the project.
+
+All documentation, comments, variable names, function names, class names, CLI help text, error messages, warnings, and examples must be grammatically correct, professional, and consistent.
+
+Follow Python grammar and syntax exactly.
+
+Use descriptive identifiers.
+
+Maintain consistent formatting, indentation, and naming conventions.
+
+Ensure every generated Python file is syntactically valid and passes linting.
+
+==================================================
+FINAL GOAL
+==================================================
+
+Build CarvusTrain as a professional, enterprise-grade, open-source AI training framework that is scalable, maintainable, extensible, well-documented, production-ready, and capable of evolving into a complete ecosystem for training, fine-tuning, evaluating, exporting, and deploying AI models through an elegant and intuitive Python API.

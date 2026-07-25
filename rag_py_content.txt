@@ -1,0 +1,89 @@
+"""RAG Pipeline — document ingestion, retrieval, and context-augmented generation."""
+import os
+from typing import Any, Dict, List, Optional
+
+
+class RetrievalResult:
+    """Container for RAG retrieval results."""
+    def __init__(self, query: str, documents: List[str], scores: List[float],
+                 sources: Optional[List[str]] = None) -> None:
+        self.query = query
+        self.documents = documents
+        self.scores = scores
+        self.sources = sources or []
+
+    def __len__(self) -> int:
+        return len(self.documents)
+
+
+class RAGPipeline:
+    """Retrieval-Augmented Generation pipeline.
+
+    Ingests documents, builds a search index via KnowledgeBase,
+    retrieves relevant context, and generates context-augmented responses.
+
+    Examples:
+        >>> rag = RAGPipeline()
+        >>> rag.ingest_text("Python is a programming language.")
+        >>> results = rag.retrieve("What is Python?", top_k=3)
+    """
+    def __init__(self) -> None:
+        from .memory import KnowledgeBase
+        self.knowledge_base = KnowledgeBase()
+        self.documents: List[str] = []
+        self.metadata: List[Dict[str, Any]] = []
+
+    def ingest_text(self, text: str, metadata: Optional[Dict[str, Any]] = None) -> int:
+        if not text or not text.strip():
+            return 0
+        text = text.strip()
+        self.documents.append(text)
+        self.metadata.append(metadata or {})
+        self.knowledge_base.add_fact(text, meta=metadata or {})
+        return len(text)
+
+    def ingest_file(self, filepath: str) -> int:
+        from .parser import DataParser
+        if not os.path.exists(filepath):
+            raise FileNotFoundError(f"File not found: {filepath}")
+        total = 0
+        for record in DataParser.parse(filepath):
+            total += self.ingest_text(record.get("text", ""), {"source": filepath})
+        return total
+
+    def retrieve(self, query: str, top_k: int = 5) -> RetrievalResult:
+        if not self.documents:
+            return RetrievalResult(query, [], [])
+        results = self.knowledge_base.search(query, top_k=top_k)
+        docs, scores, sources = [], [], []
+        for doc_text, score in results:
+            docs.append(doc_text)
+            scores.append(score)
+            try:
+                idx = self.documents.index(doc_text)
+                src = self.metadata[idx].get("source", "unknown") if idx < len(self.metadata) else "unknown"
+                sources.append(src)
+            except ValueError:
+                sources.append("unknown")
+        return RetrievalResult(query, docs, scores, sources)
+
+    def generate(self, query: str, model: Any, top_k: int = 3) -> str:
+        results = self.retrieve(query, top_k=top_k)
+        if not results.documents:
+            return model.ask(query) if hasattr(model, "ask") else ""
+        context = "\n".join(results.documents[:3])
+        augmented = f"Context:\n{context}\n\nBased on the context, answer: {query}"
+        if hasattr(model, "ask"):
+            return model.ask(augmented)
+        return f"[RAG] Context: {context[:200]}..."
+
+    def clear(self) -> None:
+        self.documents.clear()
+        self.metadata.clear()
+        self.knowledge_base.clear()
+
+    @property
+    def stats(self) -> Dict[str, Any]:
+        return {"documents": len(self.documents),
+                "knowledge_facts": len(self.knowledge_base),
+                "languages": self.knowledge_base.get_programming_languages()}

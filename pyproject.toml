@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "CarvusTrain"
+version = "1.1.0"
+description = "CarvusTrain: A powerful AI development ecosystem — train, deploy, and serve AI models with code generation, grammar understanding, RAG, and agent training."
+readme = "README.md"
+authors = [
+    { name = "Aadil Fazal", email = "aadilfazalb4u@gmail.com" }
+]
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+keywords = [
+    "ai",
+    "deep-learning",
+    "machine-learning",
+    "training-framework",
+    "nlp",
+    "transformers",
+    "code-generation",
+    "rag",
+    "llm",
+    "carvustrain",
+    "aadil-fazal"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Code Generators"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+    "build>=1.0"
+]
+numpy = [
+    "numpy>=1.24"
+]
+yaml = [
+    "pyyaml>=6.0"
+]
+torch = [
+    "torch>=2.0.0"
+]
+all = [
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.0",
+    "sentence-transformers>=2.2",
+]
+
+[project.scripts]
+carvustrain = "CarvusTrain.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Aadil-Fazal/CarvusTrain"
+Documentation = "https://github.com/Aadil-Fazal/CarvusTrain/tree/main/docs"
+Repository = "https://github.com/Aadil-Fazal/CarvusTrain.git"
+Changelog = "https://github.com/Aadil-Fazal/CarvusTrain/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["CarvusTrain", "CarvusTrain.*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true

@@ -1,0 +1,767 @@
+Metadata-Version: 2.4
+Name: CarvusTrain
+Version: 1.1.0
+Summary: CarvusTrain: A powerful AI development ecosystem — train, deploy, and serve AI models with code generation, grammar understanding, RAG, and agent training.
+Author-email: Aadil Fazal <aadilfazalb4u@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2026 Carvus AI Team
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO QUALITY OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/Aadil-Fazal/CarvusTrain
+Project-URL: Documentation, https://github.com/Aadil-Fazal/CarvusTrain/tree/main/docs
+Project-URL: Repository, https://github.com/Aadil-Fazal/CarvusTrain.git
+Project-URL: Changelog, https://github.com/Aadil-Fazal/CarvusTrain/blob/main/CHANGELOG.md
+Keywords: ai,deep-learning,machine-learning,training-framework,nlp,transformers,code-generation,rag,llm,carvustrain,aadil-fazal
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0; extra == "dev"
+Requires-Dist: black>=23.0; extra == "dev"
+Requires-Dist: ruff>=0.1.0; extra == "dev"
+Requires-Dist: mypy>=1.0; extra == "dev"
+Requires-Dist: build>=1.0; extra == "dev"
+Provides-Extra: numpy
+Requires-Dist: numpy>=1.24; extra == "numpy"
+Provides-Extra: yaml
+Requires-Dist: pyyaml>=6.0; extra == "yaml"
+Provides-Extra: torch
+Requires-Dist: torch>=2.0.0; extra == "torch"
+Provides-Extra: all
+Requires-Dist: numpy>=1.24; extra == "all"
+Requires-Dist: pyyaml>=6.0; extra == "all"
+Requires-Dist: scikit-learn>=1.0; extra == "all"
+Requires-Dist: sentence-transformers>=2.2; extra == "all"
+Dynamic: license-file
+
+<!-- HEADER & BRANDING -->
+<div align="center">
+
+![Capsule Render Banner](https://capsule-render.vercel.app/api?type=shark&color=gradient&customColorList=0,2,3,8&height=200&section=header&text=CarvusTrain&fontSize=90&fontColor=ffffff&animation=twinkling)
+
+<br/>
+
+<!-- Logo Image -->
+<p align="center">
+  <img src="logo.png" width="220" alt="CarvusTrain Logo" style="border-radius: 20px; box-shadow: 0 4px 20px rgba(255, 127, 80, 0.25);"/>
+</p>
+
+<br/>
+
+<!-- Animated Typing Logo Banner -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=40&duration=2000&pause=500&color=FF7F50&center=true&vCenter=true&width=600&height=80&repeat=false&lines=%E2%9A%A1CarvusTrain">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=40&duration=2000&pause=500&color=FF7F50&center=true&vCenter=true&width=600&height=80&repeat=false&lines=%E2%9A%A1CarvusTrain" alt="CarvusTrain Logo Typing">
+</picture>
+
+<br/>
+
+# ⚡ CarvusTrain
+
+### The AI Development Ecosystem for the Modern Era
+
+**Train • Build • Deploy • Evolve**
+
+<p>
+  <img src="https://img.shields.io/badge/Status-Production%20Ready-22c55e?style=for-the-badge&logo=checkmarx&logoColor=white&labelColor=1a1a2e" alt="Status"/>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=1a1a2e" alt="Python"/>
+  <img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=1a1a2e" alt="License"/>
+  <img src="https://img.shields.io/badge/Platform-Cross%20Platform-6366f1?style=for-the-badge&logo=linux&logoColor=white&labelColor=1a1a2e" alt="Platform"/>
+</p>
+
+</div>
+
+<!-- DYNAMIC BADGES -->
+<div align="center">
+
+[![Latest Release](https://img.shields.io/github/v/release/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/releases)
+[![PyPI Version](https://img.shields.io/pypi/v/CarvusTrain?style=flat-square&logo=pypi&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://pypi.org/project/CarvusTrain/)
+[![Downloads](https://img.shields.io/pypi/dm/CarvusTrain?style=flat-square&logo=python&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://pypi.org/project/CarvusTrain/)
+[![GitHub Stars](https://img.shields.io/github/stars/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/network/members)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Aadil-Fazal/CarvusTrain/tests.yml?style=flat-square&logo=githubactions&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/actions)
+
+[![Open Issues](https://img.shields.io/github/issues/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/pulls)
+[![Last Commit](https://img.shields.io/github/last-commit/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/commits/main)
+[![Code Size](https://img.shields.io/github/languages/code-size/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain)
+[![Contributors](https://img.shields.io/github/contributors/Aadil-Fazal/CarvusTrain?style=flat-square&logo=github&logoColor=white&color=ff7f50&labelColor=1a1a2e)](https://github.com/Aadil-Fazal/CarvusTrain/graphs/contributors)
+
+</div>
+
+<!-- ANIMATED TYPING -->
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3500&pause=800&color=FF7F50&center=true&vCenter=true&width=900&lines=Build+powerful+AI+models+with+Python;Train+models+with+semantic+understanding;Create+intelligent+agents+with+knowledge+retention;Deploy+AI+systems+as+REST+APIs;No+mandatory+dependencies+required;%E2%9A%A1+Zero-to-inference+in+minutes" alt="Typing Animation"/>
+</p>
+
+<!-- CTA BUTTONS -->
+<div align="center">
+  <a href="#-quick-start">
+    <img src="https://img.shields.io/badge/%F0%9F%9A%80_Get_Started-ff7f50?style=for-the-badge&logo=rocket&labelColor=1a1a2e" alt="Get Started"/>
+  </a>
+  <a href="https://github.com/Aadil-Fazal/CarvusTrain/tree/main/docs">
+    <img src="https://img.shields.io/badge/%F0%9F%93%9A_Documentation-3776AB?style=for-the-badge&logo=readthedocs&labelColor=1a1a2e" alt="Documentation"/>
+  </a>
+  <a href="https://github.com/Aadil-Fazal/CarvusTrain">
+    <img src="https://img.shields.io/badge/%F0%9F%92%BB_GitHub-181717?style=for-the-badge&logo=github&labelColor=1a1a2e" alt="GitHub"/>
+  </a>
+  <a href="https://pypi.org/project/CarvusTrain">
+    <img src="https://img.shields.io/badge/%F0%9F%93%A6_PyPI-3773C1?style=for-the-badge&logo=pypi&logoColor=white&labelColor=1a1a2e" alt="PyPI"/>
+  </a>
+</div>
+
+---
+
+## 🌟 Overview
+
+> **CarvusTrain** is a pure-Python AI development ecosystem for building, training, deploying, and evolving intelligent systems — with **zero mandatory dependencies**.
+
+Built from scratch with **Python 3.10+**, CarvusTrain provides a complete AI toolkit:
+
+- 🧠 **Create AI Models** — Transformer, CNN, RNN, LSTM, or custom architectures
+- 💡 **Knowledge Management** — TF-IDF semantic search, code detection, grammar understanding
+- 📚 **Learn from Data** — Text files, CSV, JSON, XML, YAML, Markdown, custom `.ct` format
+- 🎯 **Smart Training** — Auto AI Trainer with learning validation
+- 🌐 **Deploy as APIs** — Built-in REST API server with no extra dependencies
+- 🧬 **Export Anywhere** — ONNX, GGUF, JSON, BIN, and native `.ct` formats
+
+---
+
+## 🎯 Who Should Use CarvusTrain
+
+| Profile | Use Case |
+|---------|----------|
+| **ML Engineers** | Build custom AI models without deep learning framework overhead |
+| **Full-Stack Developers** | Add AI capabilities to existing applications in minutes |
+| **Data Scientists** | Transform datasets into intelligent systems with semantic understanding |
+| **Students** | Learn AI concepts with clean, readable Python code |
+| **Hobbyists** | Experiment with AI without GPU requirements |
+
+---
+
+## ✨ Core Features
+
+<table width="100%">
+<tr>
+<td width="50%">
+
+### 🧠 Intelligent Core
+
+- **Transformer Architecture** — Attention-based reasoning
+- **Multi-Model Support** — CNN, RNN, LSTM, custom networks
+- **Knowledge Base** — TF-IDF semantic search (zero deps!)
+- **Learning Validation** — Accuracy, comprehension, retention tracking
+- **Code Detection** — Automatic language detection in 20+ languages
+- **Grammar Engine** — Built-in English grammar knowledge base
+
+</td>
+<td width="50%">
+
+### 🌐 Deployment & Export
+
+- **REST API Server** — Built-in, zero-dependency HTTP server
+- **ONNX Metadata** — Cross-platform model descriptors
+- **GGUF Format** — Compatible with llama.cpp ecosystem
+- **JSON Export** — Portable model representation
+- **Binary Export** — Compact serialized format
+- **CLI Interface** — Full command-line toolset
+
+</td>
+</tr>
+</table>
+
+<table width="100%">
+<tr>
+<td width="50%">
+
+### 💻 Code Generation Engine
+
+Generate production code in:
+
+```
+✅ Python        ✅ JavaScript     ✅ TypeScript
+✅ Java          ✅ C++            ✅ Rust
+✅ Go            ✅ Kotlin         ✅ Swift
+✅ Bash          ✅ Ruby           ✅ PHP
+✅ R             ✅ Scala          ✅ SQL
+```
+
+</td>
+<td width="50%">
+
+### 🤖 Agent Framework
+
+- **Goal-Based Agents** — Train agents for specific tasks
+- **Multi-Agent Teams** — Orchestrate specialized sub-agents
+- **Auto AI Trainer** — Smart defaults based on data size
+- **Plugin System** — Extensible architecture
+- **Personality Engine** — Configurable behavior profiles
+- **Context Tracking** — Conversation history management
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
+
+### Installation
+
+#### Via PyPI (Recommended)
+```bash
+pip install carvustrain
+```
+
+#### From Source
+```bash
+git clone https://github.com/Aadil-Fazal/CarvusTrain.git
+cd CarvusTrain
+pip install -e .
+```
+
+### Your First AI Model (30 seconds)
+
+```python
+from carvustrain import Model
+
+# Create your first AI model
+ai = Model(name="MyFirstAI")
+
+# Teach it something
+ai.learn("Python is a high-level programming language used for web development")
+ai.learn("Machine learning is a subset of artificial intelligence")
+
+# Ask it questions
+response = ai.ask("What is Python?")
+print(response)
+# Output: "Python is a high-level programming language used for web development"
+
+# Export your model
+ai.export("my_model.onnx", format="onnx")
+```
+
+### CLI Quick Commands
+
+```bash
+# Create a new project
+carvustrain create my-ai-project
+
+# Train your model
+carvustrain train --data dataset.csv --epochs 10
+
+# Interactive chat
+carvustrain chat
+
+# Start API server
+carvustrain serve --port 8000
+
+# Export model
+carvustrain export --format onnx --model my_model.ct --output model.onnx
+
+# Check system health
+carvustrain doctor
+```
+
+---
+
+## 🏗️ Architecture
+
+### System Architecture
+
+```mermaid
+graph TB
+    subgraph Input["🔌 Input Layer"]
+        Raw["Raw Data<br/>(txt, csv, json, xml, md)"]
+        CLI["CLI Input"]
+        CT["Custom .ct Files"]
+    end
+    
+    subgraph Process["⚙️ Processing Pipeline"]
+        Parser["Multi-Format Parser"]
+        Tokenizer["Tokenization"]
+        KB["Knowledge Base<br/>(TF-IDF Search)"]
+    end
+    
+    subgraph AI["🧠 AI Core"]
+        Engine["Inference Engine"]
+        Memory["Memory System<br/>(Context & Cache)"]
+        Validator["Learning Validator"]
+    end
+    
+    subgraph Output["📤 Output Layer"]
+        QA["Question Answering"]
+        Generate["Text Generation"]
+        Export["Model Export<br/>(.ct, .json, .onnx, .gguf, .bin)"]
+    end
+    
+    subgraph Deploy["🚀 Deployment"]
+        API_Server["REST API<br/>(zero dependencies)"]
+        CLI_Tools["CLI Tools"]
+    end
+    
+    Raw --> Parser
+    CLI --> Parser
+    CT --> Parser
+    
+    Parser --> Tokenizer
+    Tokenizer --> KB
+    KB --> Engine
+    
+    Engine --> Memory
+    Memory --> Validator
+    
+    Validator --> QA
+    Validator --> Generate
+    QA --> Export
+    Generate --> Export
+    
+    QA --> API_Server
+    Generate --> CLI_Tools
+```
+
+### Training Pipeline
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant CLI
+    participant Trainer
+    participant KB as Knowledge Base
+    participant Validator
+    
+    User->>CLI: carvustrain train --data dataset.csv
+    CLI->>Trainer: Initialize training
+    Trainer->>Trainer: Load & preprocess data
+    
+    loop Training Epochs
+        Trainer->>KB: Update knowledge
+        KB->>Validator: Validate quality
+        Validator-->>Trainer: Learning metrics
+    end
+    
+    Trainer-->>User: Training complete
+```
+
+---
+
+## 💻 Code Examples
+
+### Example 1: Basic Training & Inference
+
+```python
+from carvustrain import Model
+
+model = Model(name="Assistant")
+model.train(data=["AI is transforming the world."], epochs=3)
+answer = model.ask("What is AI?")
+print(answer)
+```
+
+### Example 2: Interactive Chat
+
+```python
+from carvustrain import ChatModel
+
+chat = ChatModel(name="ChatBot")
+chat.learn(["Carvus is an AI assistant built with CarvusTrain."])
+
+reply = chat.chat("Hello! Who are you?")
+print(reply)
+```
+
+### Example 3: Fine-tuning & Multi-Format Export
+
+```python
+from carvustrain import Model
+
+model = Model(name="BaseCarvus")
+model.train(data=["Base knowledge about machine learning."], epochs=2)
+
+# Fine-tune on new domain
+model.finetune(data=["Specialized knowledge on transformers."], epochs=3)
+
+# Export to multiple formats
+model.export("model.onnx", format="onnx")
+model.export("model.gguf", format="gguf")
+model.export("model.json", format="json")
+```
+
+### Example 4: Advanced Agent with Sub-Agents
+
+```python
+from carvustrain import AgentModel, Model
+
+# Create a main agent
+agent = AgentModel(name="CodeAssistant", goal="software engineer")
+
+# Add specialized sub-agents
+researcher = AgentModel(name="Researcher")
+planner = AgentModel(name="Planner")
+
+agent.add_sub_agent("researcher", researcher)
+agent.add_sub_agent("planner", planner)
+
+# Orchestrate a task
+results = agent.orchestrate("Build a Python web scraper")
+print(results)
+```
+
+### Example 5: REST API Server
+
+```python
+from carvustrain import Model
+
+ai = Model(name="ProductionAI")
+ai.learn("CarvusTrain is an AI development ecosystem.")
+
+# Start API server (zero dependencies)
+ai.serve(port=8000)
+
+# POST / with {"prompt": "your question"}
+# GET / for model status
+```
+
+### Example 6: Code Generation
+
+```python
+from carvustrain import Model
+
+model = Model(name="CodeGen")
+result = model.generate("Write a Python function to sort a list", max_new_tokens=200)
+print(result)
+```
+
+---
+
+## 🎬 CLI Guide
+
+```bash
+# Project initialization
+carvustrain create my-ai --architecture transformer
+carvustrain init ./project
+
+# Training
+carvustrain train --data dataset.csv --epochs 10 --batch-size 32
+carvustrain train --data dataset.csv --validation 20% --epochs 50
+
+# Inference & Chat
+carvustrain predict --model model.ct --prompt "Hello"
+carvustrain chat --model model.ct
+
+# Model Management
+carvustrain list
+carvustrain info --model model.ct
+carvustrain export --model model.ct --format onnx --output model.onnx
+
+# Deployment
+carvustrain serve --model model.ct --port 8000
+carvustrain deploy --model model.ct --port 8000
+
+# Utilities
+carvustrain evaluate --model model.ct --data test_data.csv
+carvustrain benchmark --model model.ct --runs 20
+carvustrain doctor
+carvustrain version
+```
+
+---
+
+## 📦 Project Structure
+
+```
+CarvusTrain/
+├── CarvusTrain/
+│   ├── __init__.py        # Public API & functional interface
+│   ├── model.py           # Core Model, ChatModel, AgentModel classes
+│   ├── trainer.py         # Training engine with learning validation
+│   ├── inference.py       # Inference engine & code generator
+│   ├── memory.py          # Knowledge base, TF-IDF, learning validator
+│   ├── cli.py             # Command-line interface
+│   ├── configuration.py   # Dataclass configs (Model, Training, Inference)
+│   ├── constants.py       # Constants & defaults
+│   ├── dataset.py         # Dataset, DataLoader, TextDataset
+│   ├── tokenizer.py       # Tokenizers (Word, Char, BPE, etc.)
+│   ├── parser.py          # Multi-format parser (.ct, .csv, .json, etc.)
+│   ├── exporter.py        # ModelExporter (ct, bin, onnx, json, gguf)
+│   ├── evaluation.py      # Evaluator & Benchmarker
+│   ├── optimizer.py       # Adam, AdamW, SGD, RMSprop, AdaGrad
+│   ├── scheduler.py       # LR schedulers
+│   ├── losses.py          # Loss functions
+│   ├── metrics.py         # Evaluation metrics
+│   ├── activation.py      # Activation functions
+│   ├── layers.py          # Neural network layers
+│   ├── callbacks.py       # Training callbacks
+│   ├── preprocessing.py   # Text preprocessing utilities
+│   ├── postprocessing.py  # Logit processing & text postprocessing
+│   ├── utils.py           # Device detection, system info, formatting
+│   ├── logger.py          # Colorized logging
+│   ├── exceptions.py      # Custom exception classes
+│   └── version.py         # Version information
+├── examples/
+│   ├── 01_basic_usage.py
+│   ├── 02_custom_carvus_file.py
+│   ├── 03_finetune_and_export.py
+│   └── 04_chat_model_interactive.py
+├── docs/
+│   ├── api_reference.md
+│   ├── architecture.md
+│   ├── cli_guide.md
+│   ├── developer_guide.md
+│   ├── installation.md
+│   └── quickstart.md
+├── pyproject.toml
+├── setup.py
+├── setup.cfg
+├── LICENSE
+└── README.md
+```
+
+---
+
+## 🛠️ Performance & Features
+
+<details>
+<summary><b>Click to expand details</b></summary>
+
+### Supported Export Formats
+
+| Format | Extension | Description |
+|--------|-----------|-------------|
+| CarvusTrain Native | `.ct` | Zip archive with model manifest |
+| JSON | `.json` | Human-readable model dump |
+| Binary | `.bin` | Compact binary serialization |
+| ONNX | `.onnx` | ONNX metadata descriptor |
+| GGUF | `.gguf` | GGUF v3 container (llama.cpp) |
+
+### Supported Data Formats
+
+| Format | Extension | Description |
+|--------|-----------|-------------|
+| Plain Text | `.txt` | Paragraph-split text |
+| CSV | `.csv` | Tabular data with headers |
+| JSON | `.json` | Structured records |
+| JSONL | `.jsonl` | Line-delimited JSON |
+| XML | `.xml` | Element-based records |
+| YAML | `.yaml`, `.yml` | YAML documents |
+| Markdown | `.md`, `.markdown` | Cleaned text content |
+| Native | `.ct` | CarvusTrain sectioned format |
+
+### Supported Tokenizers
+
+- **WordTokenizer** — Space/punctuation-based tokenization
+- **CharTokenizer** — Character-level tokenization
+- **SentenceTokenizer** — Sentence-split tokenization
+- **BPETokenizer** — Byte-pair encoding
+- **WordPieceTokenizer** — Subword tokenization (BERT-style)
+- **SentencePieceTokenizer** — Unigram language model
+- **CustomTokenizer** — User-defined tokenization
+
+</details>
+
+---
+
+## 🔐 Security & Compliance
+
+- ✅ **Zero mandatory dependencies** — Minimized attack surface
+- ✅ **Input Validation** — Robust parsing with error handling
+- ✅ **Data Isolation** — No telemetry, no external calls
+- ✅ **MIT License** — Free for commercial and personal use
+
+---
+
+## 📚 Documentation
+
+| Resource | Link |
+|----------|------|
+| **Getting Started** | [docs/quickstart.md](docs/quickstart.md) |
+| **API Reference** | [docs/api_reference.md](docs/api_reference.md) |
+| **Examples** | [examples/](examples/) |
+| **Architecture** | [docs/architecture.md](docs/architecture.md) |
+| **CLI Reference** | [docs/cli_guide.md](docs/cli_guide.md) |
+| **Changelog** | [CHANGELOG.md](CHANGELOG.md) |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Here's how to get involved:
+
+```bash
+# Clone repository
+git clone https://github.com/Aadil-Fazal/CarvusTrain.git
+cd CarvusTrain
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest tests/
+
+# Format code
+black CarvusTrain/
+ruff check CarvusTrain/
+```
+
+### Contribution Guidelines
+
+1. **Fork & Clone** — Create your feature branch (`git checkout -b feature/amazing-feature`)
+2. **Make Changes** — Code with tests and documentation
+3. **Test Locally** — Run full test suite
+4. **Commit** — Write clear commit messages
+5. **Push** — Push to your fork
+6. **Pull Request** — Create PR with detailed description
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary><b>Does CarvusTrain require deep learning knowledge?</b></summary>
+
+No! CarvusTrain abstracts away complexity with high-level APIs. However, understanding ML concepts helps optimize your models.
+</details>
+
+<details>
+<summary><b>What's the minimum hardware requirement?</b></summary>
+
+- **Minimum**: 4GB RAM, any modern CPU
+- **Recommended**: 8GB+ RAM for larger datasets
+- **GPU**: Optional — works on CPU only by default
+</details>
+
+<details>
+<summary><b>Can I use CarvusTrain for production systems?</b></summary>
+
+Absolutely! It's designed for production use with built-in REST API server and export capabilities.
+</details>
+
+<details>
+<summary><b>How does pricing work?</b></summary>
+
+CarvusTrain is **completely free and open-source** under MIT License. No hidden fees, no usage limits.
+</details>
+
+<details>
+<summary><b>Does it require external AI models or APIs?</b></summary>
+
+No! CarvusTrain is a pure-Python framework with **zero mandatory dependencies**. Everything runs locally.
+</details>
+
+<details>
+<summary><b>How is CarvusTrain different from PyTorch/TensorFlow?</b></summary>
+
+While PyTorch and TensorFlow are low-level frameworks requiring GPU setup, CarvusTrain is a high-level, zero-dependency platform that works out of the box.
+</details>
+
+---
+
+## 🗺️ Roadmap
+
+### ✅ Completed (v1.0 - v1.1)
+- [x] Core transformer architecture & model classes
+- [x] Knowledge base with TF-IDF semantic search
+- [x] Multi-format data parser (txt, csv, json, xml, yaml, md)
+- [x] Training engine with learning validation
+- [x] REST API server (zero deps)
+- [x] CLI interface with 15+ commands
+- [x] Code generation engine (20+ languages)
+- [x] Multi-format exporter (ct, json, bin, onnx, gguf)
+- [x] English grammar knowledge base
+- [x] Tokenizer suite (7 tokenizer types)
+
+### 🔄 In Progress (v1.2 - v1.5)
+- [ ] GPU-accelerated training (CUDA/ROCm)
+- [ ] Distributed training across multiple machines
+- [ ] Real-time streaming inference
+- [ ] Advanced quantization techniques
+- [ ] Visual model builder UI
+- [ ] Auto hyperparameter tuning
+
+### 🚀 Planned (v2.0+)
+- [ ] Neural Architecture Search (NAS)
+- [ ] Federated learning support
+- [ ] Multi-modal capabilities (image, audio)
+- [ ] Production monitoring dashboard
+- [ ] On-device inference frameworks
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
+
+You are free to:
+- ✅ Use commercially
+- ✅ Modify the source
+- ✅ Distribute copies
+- ✅ Use privately
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with **Python 3.10+**
+- Inspired by the open-source AI community
+- Special thanks to all contributors and stargazers ⭐
+
+---
+
+<div align="center">
+
+<!-- Animated Footer -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,8&height=150&section=footer&text=Built%20with%20%E2%9D%A4%EF%B8%8F%20by%20Aadil%20Fazal&fontSize=28&fontColor=ffffff&animation=twinkling">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,8&height=150&section=footer&text=Built%20with%20%E2%9D%A4%EF%B8%8F%20by%20Aadil%20Fazal&fontSize=28&fontColor=ffffff&animation=twinkling" alt="Footer">
+</picture>
+
+### ⭐ Star This Project
+
+If CarvusTrain helps you, please consider giving us a star ⭐ on GitHub. It means the world to us!
+
+[![GitHub Stars](https://img.shields.io/github/stars/Aadil-Fazal/CarvusTrain?style=social)](https://github.com/Aadil-Fazal/CarvusTrain)
+
+---
+
+**Made with ⚡ by [Aadil Fazal](https://github.com/Aadil-Fazal)**
+
+[GitHub](https://github.com/Aadil-Fazal/CarvusTrain) • [Documentation](docs/) • [PyPI](https://pypi.org/project/CarvusTrain/)
+
+*Last Updated: 2026 | CarvusTrain v1.1.0*
+
+</div>
