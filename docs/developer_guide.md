@@ -1,6 +1,6 @@
 # CarvusTrain — Developer Guide
 
-> **Version:** 1.0  
+> **Version:** 1.0
 > **Last updated:** July 2026
 
 ---

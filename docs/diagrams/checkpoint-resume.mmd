@@ -1,0 +1,8 @@
+flowchart TD
+    A["Resume a failed or cancelled job"] --> B{"Current input fingerprint matches?"}
+    B -->|No| C["Reject resume"]
+    B -->|Yes| D{"Previously saved step?"}
+    D -->|Yes| E["Load latest recorded checkpoint"]
+    D -->|No| F["Load base model"]
+    E --> G["Continue using saved job settings"]
+    F --> G

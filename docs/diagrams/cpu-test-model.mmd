@@ -1,0 +1,13 @@
+sequenceDiagram
+    actor User
+    participant CLI
+    participant Demo as Demo builder
+    participant Train as Learning Brain
+    participant Drive as Workspace storage
+    User->>CLI: coding test-model DIRECTORY
+    CLI->>Demo: Create CPU workspace
+    Demo->>Drive: Save tokenizer and initialized weights
+    Demo->>Train: Start bounded training
+    Train->>Drive: Save checkpoint and job metadata
+    Train-->>CLI: Return job result
+    CLI-->>User: Print JSON with job ID

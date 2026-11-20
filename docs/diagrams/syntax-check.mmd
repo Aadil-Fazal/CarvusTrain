@@ -1,0 +1,7 @@
+flowchart TD
+    A["Generated answer"] --> B{"First fenced Python block present?"}
+    B -->|No| C["Report missing Python block"]
+    B -->|Yes| D{"Within size limit?"}
+    D -->|No| E["Return validation limit diagnostic"]
+    D -->|Yes| F["Compile source in timed subprocess"]
+    F --> G["Return exit status and diagnostics"]

@@ -1,0 +1,18 @@
+sequenceDiagram
+    actor User
+    participant Main as Main Brain
+    participant Notes as CT Basic Memory
+    participant LM as Local coding model
+    participant Check as Syntax validator
+    User->>Main: Prompt and optional checkpoint ID
+    opt Memory enabled
+        Main->>Notes: Search matching notes
+        Notes-->>Main: Return matching text
+    end
+    Main->>LM: Generate from selected model
+    LM-->>Main: Return generated answer
+    opt Check requested and Python block available
+        Main->>Check: Compile extracted block
+        Check-->>Main: Return diagnostics
+    end
+    Main-->>User: Answer, source and status

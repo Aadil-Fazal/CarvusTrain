@@ -1,0 +1,8 @@
+flowchart LR
+    A["Select next example"] --> B["Encode prompt and completion"]
+    B --> C["Mask prompt tokens in labels"]
+    C --> D["Forward pass and causal loss"]
+    D --> E["Backpropagate and clip gradients"]
+    E --> F["Apply SGD update"]
+    F --> G["Publish checkpoint"]
+    G --> H["Record saved step and loss"]

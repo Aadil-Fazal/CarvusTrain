@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="960" height="382" viewBox="0 0 960 382" role="img" aria-labelledby="title description">
+  <title id="title">CarvusTrain 4</title>
+  <desc id="description">A local workspace for training and testing coding models. Python 3.10 or newer, CPU and CUDA, MIT license.</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.3" fill="#a090d5" opacity=".18"/>
+    </pattern>
+    <linearGradient id="face" x1="0%" x2="100%" y1="10%" y2="90%">
+      <stop stop-color="#8cffe9"/>
+      <stop offset=".56" stop-color="#b5c9ff"/>
+      <stop offset="1" stop-color="#ffc4ed"/>
+    </linearGradient>
+    <path id="wordmark" d="
+      M9 0h36v9H9Z M0 9h9v9H0Z M0 18h9v9H0Z M0 27h9v9H0Z M0 36h9v9H0Z M0 45h9v9H0Z M9 54h36v9H9Z
+      M63 0h27v9H63Z M54 9h9v9H54Z M90 9h9v9H90Z M54 18h9v9H54Z M90 18h9v9H90Z M54 27h45v9H54Z M54 36h9v9H54Z
+      M90 36h9v9H90Z M54 45h9v9H54Z M90 45h9v9H90Z M54 54h9v9H54Z M90 54h9v9H90Z M108 0h36v9H108Z M108 9h9v9H108Z
+      M144 9h9v9H144Z M108 18h9v9H108Z M144 18h9v9H144Z M108 27h36v9H108Z M108 36h9v9H108Z M126 36h9v9H126Z M108 45h9v9H108Z
+      M135 45h9v9H135Z M108 54h9v9H108Z M144 54h9v9H144Z M162 0h9v9H162Z M198 0h9v9H198Z M162 9h9v9H162Z M198 9h9v9H198Z
+      M162 18h9v9H162Z M198 18h9v9H198Z M162 27h9v9H162Z M198 27h9v9H198Z M162 36h9v9H162Z M198 36h9v9H198Z M171 45h9v9H171Z
+      M189 45h9v9H189Z M180 54h9v9H180Z M216 0h9v9H216Z M252 0h9v9H252Z M216 9h9v9H216Z M252 9h9v9H252Z M216 18h9v9H216Z
+      M252 18h9v9H252Z M216 27h9v9H216Z M252 27h9v9H252Z M216 36h9v9H216Z M252 36h9v9H252Z M216 45h9v9H216Z M252 45h9v9H252Z
+      M225 54h27v9H225Z M279 0h36v9H279Z M270 9h9v9H270Z M270 18h9v9H270Z M279 27h27v9H279Z M306 36h9v9H306Z M306 45h9v9H306Z
+      M270 54h36v9H270Z M324 0h45v9H324Z M342 9h9v9H342Z M342 18h9v9H342Z M342 27h9v9H342Z M342 36h9v9H342Z M342 45h9v9H342Z
+      M342 54h9v9H342Z M378 0h36v9H378Z M378 9h9v9H378Z M414 9h9v9H414Z M378 18h9v9H378Z M414 18h9v9H414Z M378 27h36v9H378Z
+      M378 36h9v9H378Z M396 36h9v9H396Z M378 45h9v9H378Z M405 45h9v9H405Z M378 54h9v9H378Z M414 54h9v9H414Z M441 0h27v9H441Z
+      M432 9h9v9H432Z M468 9h9v9H468Z M432 18h9v9H432Z M468 18h9v9H468Z M432 27h45v9H432Z M432 36h9v9H432Z M468 36h9v9H468Z
+      M432 45h9v9H432Z M468 45h9v9H468Z M432 54h9v9H432Z M468 54h9v9H468Z M486 0h45v9H486Z M504 9h9v9H504Z M504 18h9v9H504Z
+      M504 27h9v9H504Z M504 36h9v9H504Z M504 45h9v9H504Z M486 54h45v9H486Z M540 0h9v9H540Z M576 0h9v9H576Z M540 9h18v9H540Z
+      M576 9h9v9H576Z M540 18h9v9H540Z M558 18h9v9H558Z M576 18h9v9H576Z M540 27h9v9H540Z M567 27h18v9H567Z M540 36h9v9H540Z
+      M576 36h9v9H576Z M540 45h9v9H540Z M576 45h9v9H576Z M540 54h9v9H540Z M576 54h9v9H576Z M675 0h9v9H675Z M666 9h18v9H666Z
+      M657 18h9v9H657Z M675 18h9v9H675Z M648 27h9v9H648Z M675 27h9v9H675Z M648 36h45v9H648Z M675 45h9v9H675Z M675 54h9v9H675Z
+    "/>
+    <path id="star" d="M0-20 Q4-4 20 0 Q4 4 0 20 Q-4 4-20 0 Q-4-4 0-20Z"/>
+    <path id="mark" d="M18 8H50V18H60V30H46V20H23V29H15V53H24V61H40V51H49V43H59V55H50V64H41V74H22V66H11V57H3V30H11V19H18Z"/>
+    <linearGradient id="mint" x2="0%" y2="100%">
+      <stop stop-color="#e1fff5"/>
+      <stop offset=".56" stop-color="#65e3cb"/>
+      <stop offset="1" stop-color="#249281"/>
+    </linearGradient>
+    <linearGradient id="lilac" x2="0%" y2="100%">
+      <stop stop-color="#f4eaff"/>
+      <stop offset=".56" stop-color="#b694fc"/>
+      <stop offset="1" stop-color="#7051ad"/>
+    </linearGradient>
+    <linearGradient id="pink" x2="0%" y2="100%">
+      <stop stop-color="#fff0f9"/>
+      <stop offset=".56" stop-color="#f695da"/>
+      <stop offset="1" stop-color="#a34b8c"/>
+    </linearGradient>
+    <linearGradient id="key-base" x2="0%" y2="100%">
+      <stop stop-color="#5d5179"/>
+      <stop offset=".55" stop-color="#312745"/>
+      <stop offset="1" stop-color="#18162e"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-70%" width="140%" height="240%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <style>
+      .wordmark { animation: bob 4.2s ease-in-out infinite; }
+      .badge { animation: bounce 4.2s ease-in-out infinite; }
+      .badge-cuda { animation-delay: .18s; }
+      .badge-mit { animation-delay: .36s; }
+      .spark { animation: twinkle 2.8s ease-in-out infinite; }
+      .spark-late { animation-delay: .7s; }
+      @keyframes bob { 0%, 100% { transform: translateY(0); } 28% { transform: translateY(-9px); } 40% { transform: translateY(2px); } 54%, 86% { transform: translateY(0); } }
+      @keyframes bounce { 0%, 45%, 78%, 100% { transform: translateY(0); } 54% { transform: translateY(7px); } 63% { transform: translateY(-8px); } 71% { transform: translateY(2px); } }
+      @keyframes twinkle { 0%, 100% { opacity: .95; } 50% { opacity: .28; } }
+      @media (prefers-reduced-motion: reduce) { .wordmark, .badge, .spark { animation: none; } }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="958" height="380" rx="28" fill="#171531" stroke="#4e477b" stroke-width="2"/>
+  <rect x="16" y="16" width="928" height="350" rx="20" fill="url(#dots)" stroke="#3d3666"/>
+  <g transform="translate(63 47) rotate(-14 31 41) scale(.74)">
+    <use xlink:href="#mark" x="6" y="7" fill="#714eab" stroke="#0e1025" stroke-width="4" stroke-linejoin="round"/>
+    <use xlink:href="#mark" fill="#92fae4" stroke="#0e1025" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(879 75) rotate(16)">
+    <use class="spark" xlink:href="#star" x="4" y="5" fill="#975eac"/>
+    <use class="spark" xlink:href="#star" fill="#ffcdf0"/>
+  </g>
+  <g transform="translate(88 220) scale(.58)"><use class="spark spark-late" xlink:href="#star" fill="#ffda8e"/></g>
+  <g transform="translate(881 212) scale(.6)"><use class="spark spark-late" xlink:href="#star" fill="#99f8ec"/></g>
+  <path d="M116 66l11-10m4 23 15-4M840 37l-5 12m17-10-9 12M869 292l11 9m-19 2 9 12" stroke="#ad90dc" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <g transform="translate(140 96)">
+    <g class="wordmark" stroke-linejoin="round" paint-order="stroke fill">
+    <use xlink:href="#wordmark" x="10" y="13" fill="#3e2b73" stroke="#0e1025" stroke-width="11"/>
+    <use xlink:href="#wordmark" x="7" y="9" fill="#62449c" stroke="#62449c" stroke-width="8"/>
+    <use xlink:href="#wordmark" x="4" y="5" fill="#8a67c9" stroke="#8a67c9" stroke-width="7"/>
+      <use xlink:href="#wordmark" fill="url(#face)" stroke="#14122a" stroke-width="6"/>
+    </g>
+  </g>
+  <text x="480" y="219" text-anchor="middle" textLength="670" lengthAdjust="spacingAndGlyphs"
+        font-family="Trebuchet MS, Arial, sans-serif" font-size="28" font-weight="700"
+        fill="#f7edff" stroke="#2d2350" stroke-width="4" paint-order="stroke fill">A local workspace for training and testing coding models</text>
+  <g text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="20" fill="#16132a">
+    <g transform="translate(257 296) rotate(-5)">
+      <ellipse cx="6" cy="37" rx="105" ry="14" fill="#0b0a1d" opacity=".8" filter="url(#soft-shadow)"/>
+      <rect x="-105" y="-22" width="210" height="63" rx="22" fill="url(#key-base)" stroke="#0e0d20" stroke-width="3"/>
+      <path d="M-81 36H83" stroke="#726284" stroke-opacity=".46" stroke-width="2" stroke-linecap="round"/>
+      <g class="badge">
+        <rect x="-105" y="-32" width="210" height="64" rx="22" fill="#249281" stroke="#151229" stroke-width="3"/>
+        <rect x="-102" y="-32" width="204" height="55" rx="20" fill="url(#mint)" stroke="#e1fff5" stroke-opacity=".54" stroke-width="1.5"/>
+        <path d="M-83-27H83Q92-27 97-19H-97Q-92-27-83-27Z" fill="#fff" opacity=".23"/>
+        <path d="M-81 27H79" stroke="#151229" stroke-opacity=".44" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="-84" cy="3" r="4.2" fill="#fff4ff" opacity=".88"/>
+        <text y="4">Python 3.10+</text>
+      </g>
+    </g>
+    <g transform="translate(481 296) rotate(1)">
+      <ellipse cx="6" cy="37" rx="105" ry="14" fill="#0b0a1d" opacity=".8" filter="url(#soft-shadow)"/>
+      <rect x="-105" y="-22" width="210" height="63" rx="22" fill="url(#key-base)" stroke="#0e0d20" stroke-width="3"/>
+      <path d="M-81 36H83" stroke="#726284" stroke-opacity=".46" stroke-width="2" stroke-linecap="round"/>
+      <g class="badge badge-cuda">
+        <rect x="-105" y="-32" width="210" height="64" rx="22" fill="#7051ad" stroke="#151229" stroke-width="3"/>
+        <rect x="-102" y="-32" width="204" height="55" rx="20" fill="url(#lilac)" stroke="#f4eaff" stroke-opacity=".54" stroke-width="1.5"/>
+        <path d="M-83-27H83Q92-27 97-19H-97Q-92-27-83-27Z" fill="#fff" opacity=".23"/>
+        <path d="M-81 27H79" stroke="#151229" stroke-opacity=".44" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="-84" cy="3" r="4.2" fill="#fff4ff" opacity=".88"/>
+        <text y="4">CPU and CUDA</text>
+      </g>
+    </g>
+    <g transform="translate(705 296) rotate(5)">
+      <ellipse cx="6" cy="37" rx="105" ry="14" fill="#0b0a1d" opacity=".8" filter="url(#soft-shadow)"/>
+      <rect x="-105" y="-22" width="210" height="63" rx="22" fill="url(#key-base)" stroke="#0e0d20" stroke-width="3"/>
+      <path d="M-81 36H83" stroke="#726284" stroke-opacity=".46" stroke-width="2" stroke-linecap="round"/>
+      <g class="badge badge-mit">
+        <rect x="-105" y="-32" width="210" height="64" rx="22" fill="#a34b8c" stroke="#151229" stroke-width="3"/>
+        <rect x="-102" y="-32" width="204" height="55" rx="20" fill="url(#pink)" stroke="#fff0f9" stroke-opacity=".54" stroke-width="1.5"/>
+        <path d="M-83-27H83Q92-27 97-19H-97Q-92-27-83-27Z" fill="#fff" opacity=".23"/>
+        <path d="M-81 27H79" stroke="#151229" stroke-opacity=".44" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="-84" cy="3" r="4.2" fill="#fff4ff" opacity=".88"/>
+        <text y="4">MIT</text>
+      </g>
+    </g>
+  </g>
+</svg>

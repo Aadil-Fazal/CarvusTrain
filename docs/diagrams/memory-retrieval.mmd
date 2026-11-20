@@ -1,0 +1,7 @@
+flowchart TD
+    A["Explicitly add a note"] --> B[("Workspace SQLite database")]
+    C["Search terms or question"] --> D["Case-fold and collect words"]
+    D --> E["Score stored notes by word overlap"]
+    B --> E
+    E --> F["Order matching notes by score and ID"]
+    F --> G["Return matches up to the limit"]

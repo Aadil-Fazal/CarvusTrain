@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="172" viewBox="0 0 880 172" role="img" aria-labelledby="title detail">
+  <title id="title">Compare the answers</title>
+  <desc id="detail">Ask the base model and a checkpoint the same question.</desc>
+  <defs>
+    <linearGradient id="panel" x2="100%" y2="100%">
+      <stop stop-color="#25203f"/>
+      <stop offset="1" stop-color="#15142b"/>
+    </linearGradient>
+    <pattern id="grid" width="23" height="23" patternUnits="userSpaceOnUse">
+      <circle cx="11.5" cy="11.5" r="1" fill="#ffc3e6" opacity=".16"/>
+    </pattern>
+    <style>
+      .object { animation: drift 3.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .spark { animation: shine 3.8s ease-in-out infinite; }
+      @keyframes drift { 0%, 100% { transform: none; } 40% { transform: translate(9px,-6px); } 61% { transform: none; } }
+      @keyframes shine { 0%, 100% { opacity: .3; } 36%, 52% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .object, .spark { animation: none; } }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="878" height="170" rx="24" fill="url(#panel)" stroke="#514775" stroke-width="2"/>
+  <rect x="12" y="12" width="856" height="148" rx="17" fill="url(#grid)"/>
+  <ellipse cx="132" cy="143" rx="74" ry="10" fill="#0f1024"/>
+  <g transform="translate(48 17)">
+    <g class="object" stroke="#171530" stroke-width="3" stroke-linejoin="round">
+      <rect x="26" y="23" width="100" height="54" rx="14" fill="#71519c"/>
+      <rect x="19" y="16" width="100" height="54" rx="14" fill="#dbbfff"/>
+      <path d="M34 38h55M34 49h35" stroke="#73548d" stroke-width="4" stroke-linecap="round"/>
+      <rect x="52" y="67" width="100" height="54" rx="14" fill="#9e5b92"/>
+      <rect x="45" y="60" width="100" height="54" rx="14" fill="#ffbfdf"/>
+      <path d="M61 80h57M61 91h41" stroke="#844d80" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+  <path class="spark" d="M191 36q2-9 8-10-6-1-8-10-2 9-8 10 6 1 8 10zM52 83q2-8 8-10-6-1-8-10-2 9-8 10 6 2 8 10z" fill="#ffc3e6"/>
+  <g font-family="Arial, sans-serif" font-size="40" font-weight="900" paint-order="stroke fill" stroke-linejoin="round">
+    <text x="252" y="85" fill="#9e5f98" stroke="#121127" stroke-width="6">Compare the answers</text>
+    <text x="247" y="79" fill="#ffc3e6" stroke="#121127" stroke-width="5">Compare the answers</text>
+  </g>
+  <text x="249" y="114" fill="#eee8ff" font-family="Arial, sans-serif" font-size="19">Ask the base model and a checkpoint the same question</text>
+</svg>

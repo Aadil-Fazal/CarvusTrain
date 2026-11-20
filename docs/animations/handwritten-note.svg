@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="210" viewBox="0 0 920 210" role="img" aria-labelledby="note-title note-description">
+  <title id="note-title">Train locally</title>
+  <desc id="note-description">The words Train locally and a sweeping underline draw, pause, and repeat.</desc>
+  <defs>
+    <pattern id="paper" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="#586383" opacity=".35"/>
+    </pattern>
+    <linearGradient id="ink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop stop-color="#9bf9ef"/>
+      <stop offset=".52" stop-color="#ceb7ff"/>
+      <stop offset="1" stop-color="#ffb9eb"/>
+    </linearGradient>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .ink path { stroke-dasharray: none; }
+      }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="918" height="208" rx="20" fill="#151831" stroke="#465277" stroke-width="2"/>
+  <rect x="12" y="12" width="896" height="186" rx="14" fill="url(#paper)"/>
+  <g class="ink" transform="translate(120 18) scale(1.75)" fill="none" stroke="url(#ink)" stroke-width="3"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- Train -->
+    <path pathLength="1" d="M8 28 Q34 19 63 22 M38 23 Q34 42 26 66" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.0267;0.0747;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M35 62 Q45 56 50 43 Q49 53 46 63 Q55 43 62 45 Q67 46 66 50" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.0500;0.0980;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M89 46 C82 39 71 47 69 56 C65 70 80 66 89 47 C85 61 85 67 96 59" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.0733;0.1213;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M97 49 Q92 66 99 64 Q104 63 109 57 M101 39 L102 37" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.0967;0.1447;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M110 61 L115 45 Q112 55 111 64 Q123 45 131 46 Q136 47 131 59 Q129 65 139 61" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.1200;0.1680;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- locally -->
+    <path pathLength="1" d="M155 60 C166 48 180 24 173 22 C165 19 154 54 157 62 Q160 70 172 59" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.1433;0.1913;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M191 47 C182 40 170 54 171 62 C173 74 190 62 192 51 Q193 46 190 45 Q190 55 200 54" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.1667;0.2147;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M220 48 C215 40 203 48 201 58 C197 70 210 70 223 60" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.1900;0.2380;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M245 49 C236 42 225 50 223 59 C220 72 234 69 244 50 C240 63 240 71 252 61" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.2133;0.2613;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M252 61 C265 47 277 25 270 23 C262 20 251 56 254 65 Q258 73 269 62" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.2367;0.2847;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M269 62 C280 50 292 28 285 26 C277 24 266 57 270 67 Q274 74 284 64" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.2600;0.3080;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M288 49 C282 62 282 71 293 64 Q301 60 308 48 C299 74 288 91 280 88 C271 85 289 74 312 68" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.2833;0.3313;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" d="M323 67 L325 66" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.3067;0.3547;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path pathLength="1" class="underline" d="M30 83 C123 76 217 80 332 77 Q351 76 369 72" stroke-dasharray="1 1">
+      <animate attributeName="stroke-dashoffset" values="1;1;0;0"
+               keyTimes="0;0.3300;0.4100;1" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

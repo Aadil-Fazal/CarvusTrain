@@ -1,0 +1,8 @@
+stateDiagram-v2
+    [*] --> Running: start training
+    Running --> Completed: all requested steps saved
+    Running --> Cancelled: cancellation observed
+    Running --> Failed: error or recovered interruption
+    Cancelled --> Running: resume with matching inputs
+    Failed --> Running: resume with matching inputs
+    Completed --> [*]

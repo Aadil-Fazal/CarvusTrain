@@ -1,5 +1,12 @@
 # Changelog
 
+## 4.0.0
+
+- Redesigned the coding workspace terminal and added numbered checkpoint selection.
+- Added a locally initialized CPU test model with an actual training step.
+- Consolidated setup around the optional runtime and local base models.
+- Added the CarvusTrain handbook.
+
 All notable changes to the `carvustrain` project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),

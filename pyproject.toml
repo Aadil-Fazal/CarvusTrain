@@ -4,32 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "CarvusTrain"
-version = "1.1.0"
-description = "CarvusTrain: A powerful AI development ecosystem — train, deploy, and serve AI models with code generation, grammar understanding, RAG, and agent training."
+version = "4.0.0"
+description = "CarvusTrain: Multi-billion parameter AI training framework — Carvus Labs / Aadil Fazal"
 readme = "README.md"
-authors = [
-    { name = "Aadil Fazal", email = "aadilfazalb4u@gmail.com" }
-]
-license = { file = "LICENSE" }
+authors = [{ name = "Aadil Fazal", email = "aadilfazalb4u@gmail.com" }]
+license = { text = "MIT" }
 requires-python = ">=3.10"
-keywords = [
-    "ai",
-    "deep-learning",
-    "machine-learning",
-    "training-framework",
-    "nlp",
-    "transformers",
-    "code-generation",
-    "rag",
-    "llm",
-    "carvustrain",
-    "aadil-fazal"
-]
+keywords = ["ai", "deep-learning", "carvustrain", "carvus-labs", "aadil-fazal", "llm", "transformer"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Intended Audience :: Education",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -37,60 +25,36 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "Topic :: Software Development :: Code Generators"
 ]
 dependencies = []
 
 [project.optional-dependencies]
-dev = [
-    "pytest>=7.0",
-    "pytest-cov>=4.0",
-    "black>=23.0",
-    "ruff>=0.1.0",
-    "mypy>=1.0",
-    "build>=1.0"
-]
-numpy = [
-    "numpy>=1.24"
-]
-yaml = [
-    "pyyaml>=6.0"
-]
-torch = [
-    "torch>=2.0.0"
-]
-all = [
-    "numpy>=1.24",
-    "pyyaml>=6.0",
-    "scikit-learn>=1.0",
-    "sentence-transformers>=2.2",
-]
+coding = ["torch>=2.4", "transformers>=4.56,<6", "safetensors>=0.4", "psutil>=5.9"]
+dev = ["pytest>=7.0", "build>=1.0", "twine>=4.0", "ruff>=0.1.0"]
+all = ["numpy>=1.24", "pyyaml>=6.0", "scikit-learn>=1.0"]
+llm = ["torch>=2.0"]
 
 [project.scripts]
-carvustrain = "CarvusTrain.cli:main"
+carvustrain = "carvustrain.cli:main"
+carvus-train = "carvustrain.cli:main"
+carvus = "carvustrain.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/Aadil-Fazal/CarvusTrain"
-Documentation = "https://github.com/Aadil-Fazal/CarvusTrain/tree/main/docs"
 Repository = "https://github.com/Aadil-Fazal/CarvusTrain.git"
-Changelog = "https://github.com/Aadil-Fazal/CarvusTrain/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/Aadil-Fazal/CarvusTrain/blob/main/README.md"
 
 [tool.setuptools.packages.find]
-include = ["CarvusTrain", "CarvusTrain.*"]
+where = ["packages/carvustrain/src"]
+include = ["carvustrain", "carvustrain.*"]
+
+[tool.setuptools.package-data]
+carvustrain = ["py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 
-[tool.black]
-line-length = 120
-target-version = ["py310"]
-
 [tool.ruff]
 line-length = 120
 target-version = "py310"
-
-[tool.mypy]
-python_version = "3.10"
-warn_return_any = true
-warn_unused_configs = true

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="172" viewBox="0 0 880 172" role="img" aria-labelledby="title detail">
+  <title id="title">Validate the dataset</title>
+  <desc id="detail">Check examples before a run.</desc>
+  <defs>
+    <linearGradient id="panel" x2="100%" y2="100%">
+      <stop stop-color="#25203f"/>
+      <stop offset="1" stop-color="#15142b"/>
+    </linearGradient>
+    <pattern id="grid" width="23" height="23" patternUnits="userSpaceOnUse">
+      <circle cx="11.5" cy="11.5" r="1" fill="#85eadb" opacity=".16"/>
+    </pattern>
+    <style>
+      .object { animation: lift 3.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .spark { animation: shine 3.8s ease-in-out infinite; }
+      @keyframes lift { 0%, 100% { transform: none; } 40% { transform: translateY(-9px); } 61% { transform: none; } }
+      @keyframes shine { 0%, 100% { opacity: .3; } 36%, 52% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .object, .spark { animation: none; } }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="878" height="170" rx="24" fill="url(#panel)" stroke="#514775" stroke-width="2"/>
+  <rect x="12" y="12" width="856" height="148" rx="17" fill="url(#grid)"/>
+  <ellipse cx="132" cy="143" rx="74" ry="10" fill="#0f1024"/>
+  <g transform="translate(48 17)">
+    <g class="object" stroke="#171530" stroke-width="3" stroke-linejoin="round">
+      <path d="M33 32l36-15 64 9-33 15z" fill="#d3fff5"/>
+      <path d="M100 41l33-15v69l-33 16z" fill="#377686"/>
+      <path d="M33 32l67 9v70l-67-9z" fill="#8ee5d5"/>
+      <path d="M48 62l11 12 25-21M47 88l35 5" fill="none" stroke="#27616a" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </g>
+  <path class="spark" d="M191 36q2-9 8-10-6-1-8-10-2 9-8 10 6 1 8 10zM52 83q2-8 8-10-6-1-8-10-2 9-8 10 6 2 8 10z" fill="#85eadb"/>
+  <g font-family="Arial, sans-serif" font-size="40" font-weight="900" paint-order="stroke fill" stroke-linejoin="round">
+    <text x="252" y="85" fill="#317e83" stroke="#121127" stroke-width="6">Validate the dataset</text>
+    <text x="247" y="79" fill="#85eadb" stroke="#121127" stroke-width="5">Validate the dataset</text>
+  </g>
+  <text x="249" y="114" fill="#eee8ff" font-family="Arial, sans-serif" font-size="19">Check examples before a run</text>
+</svg>

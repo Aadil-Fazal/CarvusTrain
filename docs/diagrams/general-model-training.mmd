@@ -1,0 +1,7 @@
+flowchart LR
+    U["carvustrain train"] --> C["Training settings"]
+    U --> D["Input dataset"]
+    C --> M["General Model API"]
+    D --> M
+    M --> T["Trainer epochs and metrics"]
+    T --> S["Export .ct model"]

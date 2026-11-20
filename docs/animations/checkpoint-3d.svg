@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="184" viewBox="0 0 880 184" role="img" aria-labelledby="title details">
+  <title id="title">Checkpoint saved</title>
+  <desc id="details">A mint model block drops into a violet checkpoint box as a status light flashes.</desc>
+  <style>
+    .block { animation: drop 4.4s ease-in-out infinite; }
+    .light { animation: shine 4.4s ease-in-out infinite; }
+    @keyframes drop {
+      0%, 100% { transform: translateY(0); }
+      18% { transform: translateY(-13px); }
+      37%, 60% { transform: translateY(21px); }
+      72% { transform: translateY(15px); }
+    }
+    @keyframes shine { 0%, 25%, 85%, 100% { opacity: .4; } 48%, 65% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .block, .light { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="878" height="182" rx="23" fill="#181631" stroke="#4e477b" stroke-width="2"/>
+  <ellipse cx="135" cy="152" rx="77" ry="13" fill="#100f27"/>
+  <path d="M65 112l34-21h84l-28 24z" fill="#412f70" stroke="#101027" stroke-width="3"/>
+  <g class="block" stroke="#11132a" stroke-width="3" stroke-linejoin="round">
+    <path d="M94 55l41-22 41 22-41 22z" fill="#b7ffef"/>
+    <path d="M94 55v34l41 21V77z" fill="#86dfd7"/>
+    <path d="M135 77l41-22v34l-41 21z" fill="#517ca7"/>
+    <path d="M110 72l13 7m-13 3 13 7" fill="none" stroke="#28576e"/>
+  </g>
+  <path d="M65 112l90 3v39l-90-6z" fill="#bd9ef6" stroke="#101027" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M155 115l28-24v39l-28 24z" fill="#7757b7" stroke="#101027" stroke-width="3" stroke-linejoin="round"/>
+  <circle class="light" cx="86" cy="131" r="5" fill="#afffdf"/>
+  <path d="M44 75l-8-7m9 18-13-1m157-37 7-9m-2 20 12-6" stroke="#f9bdeb" stroke-width="3" stroke-linecap="round"/>
+  <g font-family="Arial, sans-serif" font-weight="900" font-size="44" paint-order="stroke fill" stroke-linejoin="round">
+    <text x="247" y="99" fill="#6645a0" stroke="#0f1025" stroke-width="8">Checkpoint saved!</text>
+    <text x="241" y="92" fill="#dabdff" stroke="#111128" stroke-width="6">Checkpoint saved!</text>
+  </g>
+  <text x="243" y="132" fill="#ede4ff" font-family="Arial, sans-serif" font-size="19">A completed step you can load again</text>
+</svg>

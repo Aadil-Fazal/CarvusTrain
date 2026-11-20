@@ -1,0 +1,9 @@
+flowchart TD
+    A["carvustrain"] --> B{"Arguments supplied?"}
+    B -->|Yes| C{"Which command?"}
+    C -->|ui| D["Interactive dashboard"]
+    C -->|coding| E["Workspace JSON commands"]
+    C -->|train| F["General model trainer"]
+    B -->|No| G{"Interactive input and output?"}
+    G -->|Yes| D
+    G -->|No| H["Scaffold or describe default workspace"]

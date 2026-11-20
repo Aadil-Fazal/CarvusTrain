@@ -1,4 +1,4 @@
-"""Minimal setup.py shim for editable installs and legacy tooling."""
+"""Minimal setup.py shim — metadata lives in pyproject.toml."""
 from setuptools import setup
 
 if __name__ == "__main__":

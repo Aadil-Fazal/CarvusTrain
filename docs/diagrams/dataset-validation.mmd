@@ -1,0 +1,9 @@
+flowchart TD
+    A["Load learn.brain"] --> B{"Include train.cl?"}
+    B -->|No| C["Read basic dataset"]
+    B -->|Yes| D["Read basic and extra datasets"]
+    C --> E["Resolve selected paths inside workspace"]
+    D --> E
+    E --> F{"Each nonblank line has prompt and completion?"}
+    F -->|Yes| G["Return training rows"]
+    F -->|No| H["Report file and line number"]

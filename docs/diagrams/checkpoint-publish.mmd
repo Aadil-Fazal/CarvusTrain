@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant T as Learning Brain
+    participant M as Coding model
+    participant F as Filesystem
+    participant D as Job database
+    T->>M: Save step checkpoint
+    M->>F: Write model and tokenizer to staging folder
+    M->>F: Rename staging folder to step-N
+    T->>F: Append recorded loss
+    T->>D: Update saved step and parameter count
+    T-->>T: Notify progress callback

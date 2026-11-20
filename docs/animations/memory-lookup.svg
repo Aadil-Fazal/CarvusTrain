@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="156" viewBox="0 0 920 156" role="img" aria-labelledby="title memory-lookup-description">
+  <title id="title">Workspace memory lookup</title>
+  <desc id="memory-lookup-description">QUERY, MATCH WORDS, then RETURN NOTES.</desc>
+  <style>
+    .signal { animation: transit 3.2s ease-in-out 3 both; }
+    .stage-one { animation: glow 3.2s ease-in-out 3 both; }
+    .stage-two { animation: glow 3.2s .52s ease-in-out 3 both; }
+    .stage-three { animation: glow 3.2s 1.04s ease-in-out 3 both; }
+    @keyframes transit {
+      0%, 8% { transform: translateX(0); opacity: .8; }
+      55%, 100% { transform: translateX(616px); opacity: .8; }
+    }
+    @keyframes glow {
+      0%, 42%, 100% { opacity: .25; }
+      15% { opacity: .9; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .signal, .stage-one, .stage-two, .stage-three { animation: none; }
+    }
+  </style>
+  <rect x="1" y="1" width="918" height="154" rx="20" fill="#10162b" stroke="#344666" stroke-width="2"/>
+  <text x="48" y="36" fill="#f1f1ff" font-family="monospace" font-size="18">WORKSPACE MEMORY LOOKUP</text>
+  <path d="M152 127H768" fill="none" stroke="#3a4c6d" stroke-width="2" stroke-dasharray="4 6"/>
+  <circle class="signal" cx="152" cy="127" r="5" fill="#f5ca92"/>
+  <g fill="#151f39" stroke="#506382">
+    <rect x="48" y="55" width="208" height="52" rx="9"/>
+    <rect x="356" y="55" width="208" height="52" rx="9"/>
+    <rect x="664" y="55" width="208" height="52" rx="9"/>
+  </g>
+  <g fill="none" stroke="#f5ca92" stroke-width="2">
+    <rect class="stage-one" x="48" y="55" width="208" height="52" rx="9" opacity=".25"/>
+    <rect class="stage-two" x="356" y="55" width="208" height="52" rx="9" opacity=".25"/>
+    <rect class="stage-three" x="664" y="55" width="208" height="52" rx="9" opacity=".25"/>
+  </g>
+  <g fill="#f5ca92" text-anchor="middle" font-family="monospace" font-size="16">
+    <text x="152" y="87">QUERY</text>
+    <text x="460" y="87">MATCH WORDS</text>
+    <text x="768" y="87">RETURN NOTES</text>
+  </g>
+</svg>

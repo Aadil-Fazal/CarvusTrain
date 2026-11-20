@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="172" viewBox="0 0 880 172" role="img" aria-labelledby="title detail">
+  <title id="title">Train a model</title>
+  <desc id="detail">Update weights one example at a time.</desc>
+  <defs>
+    <linearGradient id="panel" x2="100%" y2="100%">
+      <stop stop-color="#25203f"/>
+      <stop offset="1" stop-color="#15142b"/>
+    </linearGradient>
+    <pattern id="grid" width="23" height="23" patternUnits="userSpaceOnUse">
+      <circle cx="11.5" cy="11.5" r="1" fill="#d7bdff" opacity=".16"/>
+    </pattern>
+    <style>
+      .object { animation: wiggle 3.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .spark { animation: shine 3.8s ease-in-out infinite; }
+      @keyframes wiggle { 0%, 100% { transform: none; } 40% { transform: translateY(-7px) rotate(-9deg); } 61% { transform: none; } }
+      @keyframes shine { 0%, 100% { opacity: .3; } 36%, 52% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) { .object, .spark { animation: none; } }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="878" height="170" rx="24" fill="url(#panel)" stroke="#514775" stroke-width="2"/>
+  <rect x="12" y="12" width="856" height="148" rx="17" fill="url(#grid)"/>
+  <ellipse cx="132" cy="143" rx="74" ry="10" fill="#0f1024"/>
+  <g transform="translate(48 17)">
+    <g class="object" stroke="#171530" stroke-width="3" stroke-linejoin="round">
+      <path d="M32 47l51-24 53 25-51 24z" fill="#f2dcff"/>
+      <path d="M32 47l53 25v48L32 95z" fill="#ba9af4"/>
+      <path d="M85 72l51-24v48l-51 24z" fill="#6c55a7"/>
+      <path d="M47 72l13 6m-13 8 22 10m28-13 22-10m-22 23 22-10" fill="none" stroke="#39305d" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+  <path class="spark" d="M191 36q2-9 8-10-6-1-8-10-2 9-8 10 6 1 8 10zM52 83q2-8 8-10-6-1-8-10-2 9-8 10 6 2 8 10z" fill="#d7bdff"/>
+  <g font-family="Arial, sans-serif" font-size="40" font-weight="900" paint-order="stroke fill" stroke-linejoin="round">
+    <text x="252" y="85" fill="#7b54ba" stroke="#121127" stroke-width="6">Train a model</text>
+    <text x="247" y="79" fill="#d7bdff" stroke="#121127" stroke-width="5">Train a model</text>
+  </g>
+  <text x="249" y="114" fill="#eee8ff" font-family="Arial, sans-serif" font-size="19">Update weights one example at a time</text>
+</svg>
